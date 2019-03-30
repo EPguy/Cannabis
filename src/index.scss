@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+  }
+  
+  // box-sizing 일괄 설정
+  * {
+    box-sizing: inherit;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  
+  // 링크 스타일 밑줄 및 색상 무효화
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  

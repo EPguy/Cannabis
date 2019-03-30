@@ -1,0 +1,23 @@
+@import '../../../../src/styles/utils.scss';
+
+.Shop-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    height: calc(100vh - 11rem);
+    .item {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+            width: 200px;
+            margin-bottom: 1rem;
+        }
+    }
+    .item + .item {
+        margin-left: 4rem;
+    }
+}

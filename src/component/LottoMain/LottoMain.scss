@@ -1,0 +1,73 @@
+@import '../../styles/utils.scss';
+
+.LottoBall-wrapper {
+    height: 30vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .LottoBall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        float: left;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        &.yellow {
+            background-color: #FCC43D;
+        }
+        &.blue {
+            background-color: #8CC6E7;
+        }
+        &.red {
+            background-color: #F18D80;
+        }
+        &.purple {
+            background-color: #A7A2DE;
+        }
+        &.green {
+            background-color: #6BCE9E;
+        }
+    }
+    .LottoBall + .LottoBall {
+        margin-left: 2rem;
+    }
+}
+.buy-window {
+    display: flex;
+    justify-content: center;
+    color: white;
+    .input-number {
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+    }
+    .bonus-text {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .buy-button {
+        margin-left: 1rem;
+        background: linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+        padding: 4px 12px;
+        font-size: 12px;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        outline: 0;
+        color: white;
+        position: relative;
+        border: 1px solid;
+        border-radius: 4px;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+        &:hover {
+            
+        }
+    }
+    .input-number + .input-number {
+        margin-left: 1rem;
+    }
+}   

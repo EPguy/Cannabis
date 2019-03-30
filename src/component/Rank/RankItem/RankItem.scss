@@ -1,0 +1,24 @@
+@import '../../../../src/styles/utils.scss';
+
+.ranking-tr {
+    &:nth-child(odd) {
+        background-color: $oc-gray-3;
+    }
+}
+.ranking-table__cell {
+    border-bottom: 1px solid #cdd2d2;
+    height: 54px;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+.ranking-rank {
+    text-align: center;
+    color: #444b4b;
+}
+
+.rank-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

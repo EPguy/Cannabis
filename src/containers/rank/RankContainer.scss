@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.ranking-table {
+    z-index:80;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    background-color: #ededed;
+    border: solid 1px #cdd2d2;
+    margin: 2rem 0 2rem 0;
+    width: 80%;
+    left: 200px;
+}
+
+.ranking-table__header {
+    padding: 1rem 0 1rem 0;
+}
+
+.ranking-table {
+    height: 41px;
+    padding: 0;
+    border-bottom: 1px solid #cdd2d2;
+    background: #f2f2f2;
+    line-height: 17px;
+    font-size: 14px;
+    text-align: left;
+    color: #444b4b;
+    font-weight: normal;
+}

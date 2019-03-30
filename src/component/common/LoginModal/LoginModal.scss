@@ -1,0 +1,91 @@
+@import '../../../../src/styles/utils.scss';
+
+.w3-modal-content {
+  z-index: 90;
+  background: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 600px;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+    background-color: #f5f5f5;
+    @include media("<wide") {
+      height: 30rem;
+
+    }
+    @include media("<medium") {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    i {
+      cursor: pointer;
+      font-size: 1.5rem;
+      margin-top: 18px;
+      margin-left: 19px;
+    }
+    
+    .Modal_Input {
+      padding-left: 1rem;
+      font-size: 1.2rem;
+      width: calc(90% - 6px - 1.625rem);
+      height: calc(3.125rem - 6px);
+      border: 3px solid #e0e0e0;
+      border-radius: 5px;
+      margin-left: 2rem;
+    }
+
+    .Modal_Input + .Modal_Input {
+      margin-top: 1.5rem;
+    }
+
+    .Modal_Button {
+      transition: all 0.3s ease-in;
+      width: calc(90% - 6px - 1.625rem);
+      height: calc(3.125rem - 6px);
+      margin-top: 1.5rem;
+      margin-left: 2rem;
+      border: none;
+      border-radius: 5px;
+      background: $oc-yellow-6;
+      cursor: pointer;
+      color: black;
+      font-size: 1.125rem;
+      &:hover {
+        background-color: $oc-yellow-3;
+      }
+    }
+  }
+  .modal_Login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.125rem;
+    background-color: #e0e0e0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: $oc-blue-5;
+    font-size: .875rem;
+    font-family: NanumSquareR;
+    .Login_text {
+      cursor: pointer;
+    }
+  }
+}

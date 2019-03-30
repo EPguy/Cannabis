@@ -1,0 +1,85 @@
+@import '../../../../src/styles/utils.scss';
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+.crown {
+    margin-top: 1.3rem;
+    width: 9%;
+}
+.rank_wrapper_big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.rank_wrapper_small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.TopRank {
+    
+    .high-rank {
+        padding: 14px 18px;
+        border: 2px solid #bdbbbb;
+        background: #fff;
+        margin-top: 30px;
+        .Top_Rank {
+            width: 30px;
+            background: #bdbbbb;
+            padding: 3px 0;
+            line-height: 24px;
+            font-family: Helvetica,AppleSDGothic,"Apple SD Gothic Neo",AppleGothic,Arial,Tahoma;
+            font-size: 21px;
+            text-align: center;
+            color: #fff;
+        }
+        .Top_Point {
+            
+        }
+        .Top_Name {
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 18px;
+            color: #242929;
+            word-break:break-all;
+        }
+        img {
+            margin-top: 1rem;
+            width: 120px;
+            height: 120px;
+        }
+    }
+    .First {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 370px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        border-width: 5px;
+    }
+
+    .small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 220px;
+        border-width: 5px;  
+    }
+    .small +  .small {
+        margin-left: 2rem;
+    }
+}

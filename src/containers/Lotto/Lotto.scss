@@ -1,0 +1,11 @@
+.description {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.text + .text {
+    margin-top: 1rem;
+}
