@@ -19,17 +19,18 @@ const LottoMain = ({randNum, handleChange, handleClick}) => {
         }
     })
     return (
-        <div>
+        <div className={cx('LottoMain-wrapper')}>
+            <div className={cx('title')}> 제 <div id="title-number">1</div>회차</div>
             <div className={cx('LottoBall-wrapper')}>
                 {LottoBall}
             </div>
             <div className={cx('buy-window')}>
-                <input type="text" name="first"  onChange={handleChange} className={cx('input-number')}></input>
-                <input type="text" name="second" onChange={handleChange} className={cx('input-number')}></input>
-                <input type="text" name="third" onChange={handleChange} className={cx('input-number')}></input>
-                <input type="text" name="fourth" onChange={handleChange} className={cx('input-number')}></input>
-                <input type="text" name="fifth" onChange={handleChange} className={cx('input-number')}></input>
-                <input type="text" name="sixth" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="first"  maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="second" maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="third" maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="fourth" maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="fifth" maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
+                <input type="text" name="sixth" maxlength="2" onChange={handleChange} className={cx('input-number')}></input>
                 <button onClick={handleClick} className={cx('buy-button')}>구매</button>
             </div>
         </div>

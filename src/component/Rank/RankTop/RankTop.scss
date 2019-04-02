@@ -28,11 +28,10 @@ li {
     flex-direction: row;
 }
 .TopRank {
-    
     .high-rank {
         padding: 14px 18px;
-        border: 2px solid #bdbbbb;
-        background: #fff;
+        border: 2px solid goldenrod;
+        background: #212529;
         margin-top: 30px;
         .Top_Rank {
             width: 30px;
@@ -42,16 +41,17 @@ li {
             font-family: Helvetica,AppleSDGothic,"Apple SD Gothic Neo",AppleGothic,Arial,Tahoma;
             font-size: 21px;
             text-align: center;
-            color: #fff;
+            color: black;
+            margin-bottom: 1rem;
         }
         .Top_Point {
-            
+            color: white;
         }
         .Top_Name {
             line-height: 24px;
             font-weight: 700;
             font-size: 18px;
-            color: #242929;
+            color: white;
             word-break:break-all;
         }
         img {

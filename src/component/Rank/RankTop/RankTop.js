@@ -12,7 +12,7 @@ const RankTop = ({TopRank}) => {
                     <li className={cx('First','high-rank', 'big')}>
                         <div className={cx('Top_Rank')}>{i+1}</div>
                         <div className={cx('Top_Name')}>{v.nickname}</div>
-                        <div className={cx('Top_Point')}>{v.yam} Yam</div>
+                        <div className={cx('Top_Point')}>{v.yam} yam</div>
                         <img className={cx('Top_Profile')} src={`http://18.220.117.207:5000/${v.profile}`}/>
                     </li>
             )
@@ -24,7 +24,7 @@ const RankTop = ({TopRank}) => {
                 <li className={cx('Second','high-rank', 'small')}>
                     <div className={cx('Top_Rank')}>{i+1}</div>
                     <div className={cx('Top_Name')}>{v.nickname}</div>
-                    <div className={cx('Top_Point')}>{v.yam} Yam</div>
+                    <div className={cx('Top_Point')}>{v.yam} yam</div>
                     <img className={cx('Top_Profile')} src={`http://18.220.117.207:5000/${v.profile}`}/>
                 </li>
             )

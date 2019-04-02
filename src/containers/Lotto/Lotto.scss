@@ -1,11 +1,48 @@
-.description {
+.Lotto-wrapper {
     display: flex;
-    margin-top: 2rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    color: white;
-}
-.text + .text {
-    margin-top: 1rem;
+    height: calc(100vw - 70.5rem);
+    .description {
+        display: flex;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+    }
+    .text + .text {
+        margin-top: 1rem;
+    }
+    .notice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;    
+        border: 1px solid red;
+        width: 100vw;
+        height: 200px;
+        color: white;
+        float: bottom;
+        .text-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 20vw;
+            height: 200px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            .text {
+                margin: 0;
+            }
+        }
+        img {
+            width: 30px;
+        }
+        .text + .text {
+            margin-top: 1rem;
+        }
+    }
 }

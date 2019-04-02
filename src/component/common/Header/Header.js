@@ -21,11 +21,11 @@ const Header = ({ UserInterface, handleClick, LogoutClcik, isLogin }) => {
                                 랭킹
                             </div>
                         </a>
-                        <Link to="/Mine"> 
+                        <a href="http://18.220.117.207:5000/poker"> 
                             <div className={cx('item')}>
                                 인디언포커
                             </div>
-                        </Link>
+                        </a>
                         <Link to="/Mine"> 
                             <div className={cx('item')}>
                                 지뢰찾기

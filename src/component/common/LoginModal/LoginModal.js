@@ -4,12 +4,12 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const LoginModal = ({ExitClick, LoginClick, SignUpClick, isLoginButton, LoginButtonToggle, handleChange}) => {
+const LoginModal = ({ExitClick, LoginClick, SignUpClick, isLoginButton, LoginButtonToggle, handleChange, Login_ID, Login_Password}) => {
     const SignIn = () => {
         return (
             <React.Fragment>
-                <input type="text" placeholder="ID" name="Login_ID" onChange={handleChange} className={cx('Modal_Input')}/>
-                <input type="password" placeholder="Password" name="Login_Password" onChange={handleChange} className={cx('Modal_Input')}/>
+                <input type="text" value={Login_ID} placeholder="ID" name="Login_ID" onChange={handleChange} className={cx('Modal_Input')}/>
+                <input type="password" value={Login_Password} placeholder="Password" name="Login_Password" onChange={handleChange} className={cx('Modal_Input')}/>
                 <button onClick={LoginClick} className={cx('Modal_Button')}>로그인</button>
             </React.Fragment>
         );  

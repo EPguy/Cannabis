@@ -1,23 +1,93 @@
 @import '../../../../src/styles/utils.scss';
 
-.Shop-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
-    height: calc(100vh - 11rem);
-    .item {
-        margin-top: 4rem;
+.shop-Allwrapper { 
+    .title {
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        img {
-            width: 200px;
-            margin-bottom: 1rem;
+        align-items: flex-end;
+        color: white;
+        width: 100vw;
+        height: 30vh;
+        .title_text {
+            text-shadow:0px 0px 1rem red;
+            color: red;
+            &.color {
+                text-shadow:0px 0px 1rem blue;
+                color: blue
+            }
+            font-size: 8rem;
         }
     }
-    .item + .item {
-        margin-left: 4rem;
+    .Shop-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        height: calc(50vh - 11rem);
+        .item {
+            z-index: 6;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img {
+                pointer-events: none;
+                width: 200px;
+                margin-bottom: 1rem;
+            }
+            button {
+
+            }
+            .content-wrapper{
+                display: none;
+                pointer-events: none;
+                font-size: 16px;
+                background: #495057;
+                color: #000000;
+                word-spacing: 0px;
+                height: 145px;
+                width: 322px;
+                position: absolute;
+                top: 250px;
+                .content {
+                    position: relative;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-decoration: none solid rgb(242,242,242);
+                    word-spacing: 0px;
+                    height: 112px;
+                    width: 300px;
+                    padding: 10px 10px 10px 10px;
+                    float: left;
+                    display: block;
+                    clear: both;
+                    .item-title {
+                        color: goldenrod;
+                    }
+                    .description {
+                        color: white;
+                        margin-top: 1.3rem;
+                        float: left;
+                    }
+                    .description + .description {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+            .content-wrapper:after {
+                content: '';
+                position: absolute;
+                border-top: 20px solid #495057;
+                border-right: 10px solid transparent;
+                border-left: 10px solid transparent;
+                bottom: -10px;
+                left: 150px;
+            }
+        }
+        .item + .item {
+            margin-left: 4rem;
+        }
     }
 }

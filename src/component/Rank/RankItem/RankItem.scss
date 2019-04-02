@@ -1,12 +1,13 @@
 @import '../../../../src/styles/utils.scss';
 
 .ranking-tr {
+    color: black;
+    background-color: #ffffff;
     &:nth-child(odd) {
-        background-color: $oc-gray-3;
+        background-color: #F2F2F2;
     }
 }
 .ranking-table__cell {
-    border-bottom: 1px solid #cdd2d2;
     height: 54px;
     line-height: 16px;
     font-size: 14px;
@@ -14,7 +15,7 @@
 
 .ranking-rank {
     text-align: center;
-    color: #444b4b;
+    color: black;
 }
 
 .rank-name {

@@ -1,1 +1,221 @@
 @import '../../styles/utils.scss';
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    #img {
+        display: none;
+    }
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: goldenrod;
+        height: 4vh;
+        width: 6vw;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+    #image-submit {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        width: 4vw;
+        height: 4vh;
+    }
+    #upload_name {
+        height: 4vh;
+        margin-top: 1rem;
+    }
+}
+
+.list {
+    &:nth-child(1) {
+        margin-top: 2rem;
+    }
+}
+.list + .list {
+    margin-top: 4rem;
+}
+.list-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 80px;
+    text-align: center;
+    color: white;
+}
+
+.Items {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .LottoBall-wrapper {
+        height: auto;
+        color: #f8f9fa;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .LottoBall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            float: left;
+            width: 44px;
+            height: 44px;
+            border-radius: 100%;
+            &.yellow {
+                background-color: #FCC43D;
+            }
+            &.blue {
+                background-color: #8CC6E7;
+            }
+            &.red {
+                background-color: #F18D80;
+            }
+            &.purple {
+                background-color: #A7A2DE;
+            }
+            &.green {
+                background-color: #6BCE9E;
+            }
+        }
+        .LottoBall + .LottoBall {
+            margin-left: 2rem;
+        }
+    }
+    .item {
+        z-index: 6;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .front {
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                font-size: 1.5rem;
+                color: white;
+                text-align: center;
+            }
+            #number {
+                margin-left: 1rem;
+            }
+        }
+        button {
+            margin-right: 2.7rem;
+        }
+        img {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+        .content-wrapper{
+            z-index: 6;
+            display: none;
+            pointer-events: none;
+            font-size: 16px;
+            text-decoration: none solid rgb(0, 0, 0);
+            background: #495057;
+            color: #000000;
+            word-spacing: 0px;
+            height: 145px;
+            width: 322px;
+            position: absolute;
+            top: 750px;
+            .content {
+                position: relative;
+                font-size: 14px;
+                line-height: 16px;
+                text-decoration: none solid rgb(242,242,242);
+                word-spacing: 0px;
+                height: 112px;
+                width: 300px;
+                padding: 10px 10px 10px 10px;
+                float: left;
+                display: block;
+                clear: both;
+                .item-title {
+                    color: goldenrod;
+                }
+                .description {
+                    color: white;
+                    margin-top: 1.3rem;
+                    float: left;
+                }
+                .description + .description {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+        .content-wrapper:after {
+            content: '';
+            position: absolute;
+            border-bottom: 20px solid #495057;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            bottom: 136px;
+            left: 130px;
+        }
+    }
+    .item + .item {
+        margin-left: 8rem;
+    }
+}
+
+.profile-manager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .user-profile {
+        width: 200px;
+    }
+    button {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 4rem;
+}   
+
+.info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    #realname {
+        font-size: 2rem;
+    }
+    #nickname {
+        font-size: 2rem;
+    }
+    #yam {
+        font-size: 2rem;
+    }
+    .info-text {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+}
+
+#Lotto-list {
+    margin-bottom: 4rem;
+}

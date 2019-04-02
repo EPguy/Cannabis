@@ -108,6 +108,7 @@ class HeaderContainer extends Component {
     }
     render() {
         const { ExitClick, LoginClick, SignUpClick, LoginButtonToggle, handleChange, LogoutClick} = this;
+        const { Login_ID, Login_Password } = this.state;
         const { isClick, isLogin, isLoginButton } = this.state;
         const {LoginValue, SignUpValue} = this.state;
         const { UserInterface } = this.props;
@@ -117,6 +118,7 @@ class HeaderContainer extends Component {
                 { this.state.isClick ? <LoginModal ExitClick={ExitClick} 
                                         LoginClick={LoginClick} isLoginButton={isLoginButton} handleChange={handleChange}
                                         LoginButtonToggle={LoginButtonToggle} SignUpClick={SignUpClick}
+                                        Login_ID={Login_ID} Login_Password={Login_Password}
                                         /> : null 
                 }
             </div>

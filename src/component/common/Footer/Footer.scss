@@ -1,0 +1,53 @@
+@import '../../../../src/styles/utils.scss';
+
+.footer-wrapper {  
+    margin-top: 10rem;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: black;
+    height: 220px;
+    .footer-content-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 900px;
+        height: 300px;
+        .content {
+            &.frontend {
+                .team {
+                    color: white;
+                    padding-bottom: 0.4rem;
+                    padding-right: 2rem;
+                    font-size: 19px;
+                    font-family: NanumSquareEB;
+                    border-bottom: 1px solid white;
+                }
+                .member {
+                    margin-top: 1.2rem;
+                    color: white;
+                    font-size: 15px;
+                }
+            }
+        }
+        .content + .content {
+            margin-left: 7rem;
+        }
+    }
+    .footer-bottom-wrapper {
+        margin-top: 2rem;
+        width: 900px;
+        height: 125px;
+        .copyright {
+            img {
+                width: 30px;
+            }
+            span {
+                margin-left: 0.5rem;
+                color: white;
+            }
+        }
+    }
+}

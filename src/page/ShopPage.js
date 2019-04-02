@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from 'containers/common/HeaderContainer';
 import UserInterfaceContainer from 'containers/UserInterfaceContainer/UserInterfaceContainer';
-import Shop from 'component/common/Shop';
+import Shop from 'containers/Shop/ShopContainer';
 
 const ShopPage = () => {
     return (

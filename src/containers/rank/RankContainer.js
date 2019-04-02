@@ -29,11 +29,11 @@ class RankContainer extends Component {
             <div id="Ranking">
                 <RankTop TopRank={Rank.filter((v,i) => i < 5)}/>
                 <table className={cx('ranking-table')}>
-                    <thead>
-                        <tr>
+                    <thead className={cx('ranking-tr')}>
+                        <tr bgcolor="goldenrod">
                             <th className={cx('ranking-table__header')}></th>
                             <th className={cx('ranking-table__header')}>사용자</th>
-                            <th className={cx('ranking-table__header')}>Yam</th>
+                            <th className={cx('ranking-table__header')}>yam</th>
                         </tr>
                     </thead>
                     <tbody>

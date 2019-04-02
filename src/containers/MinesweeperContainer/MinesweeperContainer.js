@@ -70,9 +70,9 @@ class MinesweeperContainer extends Component {
         if((this.state.batting_money <= 0) || this.state.minenum === 0) {
             return alert("배팅금액 또는 지뢰 개수를 선택해주세요.")
         }
-        if(this.state.batting_money > this.state.yam) {
-            return alert("보유 yam이 부족합니다.")
-        }
+        // if(this.state.batting_money > this.state.yam) {
+        //     return alert("보유 yam이 부족합니다.")
+        // }
         this.gameStart();
         let arr = new Array();
         let booms = [];
@@ -120,7 +120,8 @@ class MinesweeperContainer extends Component {
     
         for(let i=0; i<25; i++)
         {   
-            let rand = Math.floor(Math.random() * arr.length-1) + 1;    
+            let rand = Math.floor(Math.random() * arr.length-1) + 1;
+            console.log(rand);
             let temp = arr[rand];
             arr[rand] = arr[i];
             arr[i] = temp;
@@ -154,14 +155,17 @@ class MinesweeperContainer extends Component {
             return;
         } else if(this.state.fail === true) {
             alert("Cash out을 할 수 없습니다.");
-            window.location.reload();
+            window.location.href = "http://18.220.117.207:5000";
         } else {
             let CashOut = document.getElementById("CashOut");
             CashOut.style.pointerEvents = 'none';
             axios.post("http://18.220.117.207:5000/user/yam",{yam: this.state.plusyam}, { headers: {"token": cookies.get("token")}})
             .then(response => console.log(response))
-            .then(() => alert("yam 충전 성공"))
-            .then(() => window.location.reload())
+            .then(() => {
+                            alert("yam 충전 성공")
+                            e.preventDefault()
+                        })
+            .then(() => window.location.href = "http://18.220.117.207:5000")
         }
     }
 

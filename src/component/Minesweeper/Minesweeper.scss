@@ -1,203 +1,209 @@
 @import '../../styles/utils.scss';
 
-
-.Minesweeper {
-    margin-top: 2rem;
-    padding: 20px;
-    border: 1px solid white;
-    width: 100vw;
-    height: 50vh;
-    .Container {
-        max-width: 54em;
-        margin: 0 auto;
-        text-align: left;
-        min-height: 26em;
-        .user-interface {
-            display: flex;
-            justify-content: flex-end;
-            color: white;
+.Minesweeper-wrapper {
+    .Minesweeper {
+        margin-top: 2rem;
+        padding: 20px;
+        border: 1px solid white;
+        width: 100vw;
+        height: 50vh;
+        .Container {
+            max-width: 54em;
+            margin: 0 auto;
             text-align: left;
-            height: 112px;
-            width: 739px;    
-            .top-row {
+            min-height: 26em;
+            .user-interface {
                 display: flex;
-                .batting {
-                    input {
-                        font-size: 28px;
-                        text-align: center;
-                        background-color: black;
-                        height: 53px;
-                        width: 174px;
-                        border-top: 1px solid #000000;
-                        border-right: 1px solid #333333;
-                        border-bottom: 1px solid #555555;
-                        border-left: 1px solid #333333;
-                        color: #cccccc;
-                    }
-                }
-                .game_button {
-                    button {
-                        background-color: #37b24d;
-                        color: white;
-                        border: 1px solid #52B000;
-                        padding: 10px 12px 10px 12px;
-                        height: 53px;
-                        width: 109px;
-                    } 
-                }
-            }
-            .bottom-row {
-                display: flex;
-                height: 3rem;
-                .cell {
-                    display: flex;
-                    background: #333;
-                    border: 1px solid #111;
-                    border-top-color: #000;
-                    height: 39px;
-                    width: 71px;
-                    button {
-                        color: white;
-                        border-top: 1px solid #777777;
-                        border-right: 1px solid #111111;
-                        border-bottom: 2px solid #1A1A1A;
-                        border-left: 1px solid #666666;
-                        background-color: #444444;
-                        cursor: pointer;
-                        flex:1;
-                        img{
-                            margin-right: 0.2rem;
-                            width: 20px;
-                        }
-                        span {
-                            pointer-events: none;
-                            cursor: default;
-                        }
-                    }
-                }
-            }
-        }
-        .table-mine {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            table {
-                display: table;
-                border-collapse: separate;
-                border-spacing: 2px;
-                border-color: grey;
-                table-layout: fixed;
-                text-align: center;
-                max-height: 400px;
-                max-width: 400px;
-                color: black;
-                width: 300px;
-                height: 300px;
-                tr {
-                    display: table-row;
-                    vertical-align: middle;
-                    border-color: inherit;
-                }
-                td {
-                    height: 57.6px;
-                    word-break: break-all;
-                    background-color: gray;
-                    border-radius: 5px;
-                }
-            }
-            .Game_status {
-                margin-left: 2rem;
-                width: 300px;
-                height: 300px;
+                justify-content: flex-end;
                 color: white;
-                .batting-status {
+                text-align: left;
+                height: 112px;
+                width: 739px;    
+                .top-row {
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    height: 75px;
-                    width: 411px;
-                    border-top: 1px solid #222222;
-                    border-right: 1px solid #333333;
-                    border-bottom: 1px solid #444444;
-                    border-left: 1px solid #333333;
-                    padding: 14px;
-                }
-                .left {
-                    margin-left: 1rem;
-                    .next {
-                        font-size: 0.7rem;
-                    }
-                    #next {
-                        color: #88DD44;
-                        font-size: 2rem;
-                    }
-                }
-                .right {
-                    margin-left: 3rem;
-                    .stake {
-                        font-size: 0.7rem;
-                    }
-                    #stake {
-                        color: #FFDD00;
-                        font-size: 2rem;
-                    }
-                }
-                .button {
-                    #CashOut {
-                        background-color: #E5AC00;
-                        font-family: sans-serif;
-                        font-size: 18.2px;
-                        text-decoration: none solid rgb(255, 255, 255);
-                        text-align: center;
-                        word-spacing: 0px;
-                        color: white;
-                        height: 45px;
-                        width: 92px;
-                        border: 1px solid #E58A00;
-                        padding: 10px 12px 10px 12px;
-                        cursor: pointer;
-                        transform: none;
-                        &:active {
-                            -webkit-filter: brightness(70%);
-                            -moz-filter: brightness(70%);  
+                    .batting {
+                        input {
+                            font-size: 28px;
+                            text-align: center;
+                            background-color: black;
+                            height: 53px;
+                            width: 174px;
+                            border-top: 1px solid #000000;
+                            border-right: 1px solid #333333;
+                            border-bottom: 1px solid #555555;
+                            border-left: 1px solid #333333;
+                            color: #cccccc;
                         }
-
+                    }
+                    .game_button {
+                        button {
+                            background-color: #37b24d;
+                            color: white;
+                            border: 1px solid #52B000;
+                            padding: 10px 12px 10px 12px;
+                            height: 53px;
+                            width: 109px;
+                        } 
                     }
                 }
-                .col + .col {
-                    margin-left: 3rem;
-                }
-                .User-Yam {
+                .bottom-row {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    width: 411px;
-                    height: 225px;
-                    border-top: 1px solid #222222;
-                    border-right: 1px solid #333333;
-                    border-bottom: 1px solid #444444;
-                    border-left: 1px solid #333333;
-                    .yam {
-                        color: #0ca678; 
-                        font-size: 30px;
+                    height: 3rem;
+                    .cell {
+                        display: flex;
+                        background: #333;
+                        border: 1px solid #111;
+                        border-top-color: #000;
+                        height: 39px;
+                        width: 71px;
+                        button {
+                            color: white;
+                            border-top: 1px solid #777777;
+                            border-right: 1px solid #111111;
+                            border-bottom: 2px solid #1A1A1A;
+                            border-left: 1px solid #666666;
+                            background-color: #444444;
+                            cursor: pointer;
+                            flex:1;
+                            img{
+                                margin-right: 0.2rem;
+                                width: 20px;
+                            }
+                            span {
+                                pointer-events: none;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+            .table-mine {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                table {
+                    display: table;
+                    border-collapse: separate;
+                    border-spacing: 2px;
+                    border-color: grey;
+                    table-layout: fixed;
+                    text-align: center;
+                    max-height: 400px;
+                    max-width: 400px;
+                    color: black;
+                    width: 300px;
+                    height: 300px;
+                    tr {
+                        display: table-row;
+                        vertical-align: middle;
+                        border-color: inherit;
+                    }
+                    td {
+                        height: 57.6px;
+                        word-break: break-all;
+                        background-color: gray;
+                        border-radius: 5px;
+                    }
+                }
+                .Game_status {
+                    margin-left: 2rem;
+                    width: 300px;
+                    height: 300px;
+                    color: white;
+                    .batting-status {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        height: 75px;
+                        width: 411px;
+                        border-top: 1px solid #222222;
+                        border-right: 1px solid #333333;
+                        border-bottom: 1px solid #444444;
+                        border-left: 1px solid #333333;
+                        padding: 14px;
+                    }
+                    .left {
+                        margin-left: 1rem;
+                        .next {
+                            font-size: 0.7rem;
+                        }
+                        #next {
+                            color: #88DD44;
+                            font-size: 2rem;
+                        }
+                    }
+                    .right {
+                        margin-left: 3rem;
+                        .stake {
+                            font-size: 0.7rem;
+                        }
+                        #stake {
+                            color: #FFDD00;
+                            font-size: 2rem;
+                        }
+                    }
+                    .button {
+                        #CashOut {
+                            background-color: #E5AC00;
+                            font-family: sans-serif;
+                            font-size: 18.2px;
+                            text-decoration: none solid rgb(255, 255, 255);
+                            text-align: center;
+                            word-spacing: 0px;
+                            color: white;
+                            height: 45px;
+                            width: 92px;
+                            border: 1px solid #E58A00;
+                            padding: 10px 12px 10px 12px;
+                            cursor: pointer;
+                            transform: none;
+                            &:active {
+                                -webkit-filter: brightness(70%);
+                                -moz-filter: brightness(70%);  
+                            }
+    
+                        }
+                    }
+                    .col + .col {
+                        margin-left: 3rem;
+                    }
+                    .User-Yam {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 411px;
+                        height: 225px;
+                        border-top: 1px solid #222222;
+                        border-right: 1px solid #333333;
+                        border-bottom: 1px solid #444444;
+                        border-left: 1px solid #333333;
+                        .yam {
+                            color: #0ca678; 
+                            font-size: 30px;
+                        }
                     }
                 }
             }
         }
     }
+    
+    .notice {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+    
+        color: white;
+        margin-top: 0.3rem;
+        border: 1px solid red;
+        img {
+            margin-right: 1.6rem;
+            width: 30px;
+        }
+    }  
 }
 
-.notice {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5rem;
-
-    color: white;
-    margin-top: 0.3rem;
-    border: 1px solid red;
-}

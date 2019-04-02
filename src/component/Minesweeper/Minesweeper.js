@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './Minesweeper.scss';
 import classNames from 'classnames/bind';
 import mine from 'image/mine.png';
-
+import warning from 'image/warning.png'
 const cx = classNames.bind(styles);
 
 const Minesweeper = ({handleCashOut, handleGameStart, handleMineClick, BattingYam, handleChange, UserYam, next}) => {
     return (
-        <div>
+        <div className={cx('Minesweeper-wrapper')}>
             <div className={cx('Minesweeper')}>
                 <div className={cx('Container')}>
                     <div className={cx('user-interface')}>
@@ -108,13 +108,14 @@ const Minesweeper = ({handleCashOut, handleGameStart, handleMineClick, BattingYa
                             </div>
                             <div className={cx('User-Yam')}>
                                 <div className={cx('yam')}>{UserYam}</div>
-                                <div>Yam 을 가지고 있습니다.</div>
+                                <div>yam 을 가지고 있습니다.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={cx('notice')}>
+                <img src={warning}/>
                 게임종료시 꼭 캐시아웃을 해주시기 바랍니다.
             </div>
         </div>
